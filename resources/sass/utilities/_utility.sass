@@ -1,0 +1,54 @@
+/* UTILITY CLASSES */
+
+
+/* PADDING & MARGINS */
+
+$max-n: 100
+$max-p:	20
+$increment-n: 5
+$increment-p: 5
+$directions: (top: 't', right: 'r', bottom: 'b', left: 'l')
+
+/* Padding PX */
+@for $i from 0 through $max-n
+	$value: $i * $increment-n
+	.p-#{$value}
+		padding: #{$value}#{'px'} !important
+@each $key, $direction in $directions
+	@for $i from 0 through $max-n
+		$value: $i * $increment-n
+		.p#{$direction}-#{$value} 
+			padding-#{$key}: #{$value}#{'px'} !important
+
+/* Padding % */
+@for $i from 1 through $max-p
+	$value: $i * $increment-p
+	.p-#{$value}p
+		padding: #{$value}#{'%'} !important
+@each $key, $direction in $directions
+	@for $i from 1 through $max-p
+		$value: $i * $increment-p
+		.p#{$direction}-#{$value}p
+			padding-#{$key}: #{$value}#{'%'} !important
+
+/* Margin PX */
+@for $i from 0 through $max-n
+	$value: $i * $increment-n
+	.m-#{$value}
+		margin: #{$value}#{'px'} !important
+@each $key, $direction in $directions
+	@for $i from 0 through $max-n
+		$value: $i * $increment-n
+		.m#{$direction}-#{$value} 
+			margin-#{$key}: #{$value}#{'px'} !important
+
+/* Padding % */
+@for $i from 1 through $max-p
+	$value: $i * $increment-p
+	.m-#{$value}p
+		margin: #{$value}#{'%'} !important
+@each $key, $direction in $directions
+	@for $i from 1 through $max-p
+		$value: $i * $increment-p
+		.m#{$direction}-#{$value}p
+			margin-#{$key}: #{$value}#{'%'} !important

@@ -1,0 +1,33 @@
+test
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+
+	&.toolbox
+		display: flex
+		flex-direction: column
+		top: 16px
+		left: 16px
+		background-color: hsla(0deg, 0%, 0%, 75%)
+		backdrop-filter: blur(16px)
+		transition: background-color .15s ease-in-out, color .15s ease-in-out
+		overflow: hidden
+		border-radius: 8px
+
+		.option
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 40px
+			height: 40px
+			cursor: pointer
+			overflow: hidden
+
+.theme-toggle-btn
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 40px
+	height: 40px
+

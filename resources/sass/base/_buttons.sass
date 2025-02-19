@@ -1,0 +1,144 @@
+$btn-transition-time: 250ms
+
+.btn
+	display: inline-flex
+	align-items: center
+	padding: 7px 16px
+	gap: 8px
+	border-width: 1px
+	border-style: solid
+	border-color: transparent
+	box-sizing: border-box
+	color: $color-white
+	background-color: $color-default
+	vertical-align: middle
+	user-select: none
+	cursor: pointer
+	transition: color $btn-transition-time, background-color $btn-transition-time, border $btn-transition-time, opacity $btn-transition-time
+	&:hover
+		background-color: darken($color-default, 15%)
+	&:active, &.active
+		background-color: darken($color-default, 15%)
+	&.disabled
+		opacity: 75%
+		pointer-events: none
+	&.btn-link
+		color: $color-default
+		background-color: transparent
+		text-decoration: underline
+	&.btn-light
+		color: $color-default-dark
+		background-color: $color-default-light
+		&:hover
+			color: $color-default-dark
+			background-color: lighten($color-default-light, 5%),
+	&.btn-outline
+		border-color: $color-default
+		color: $color-default
+		background-color: transparent
+		&:hover
+			color: $color-white
+			background-color: $color-default
+	&.btn-rounded
+		border-radius: 8px
+	&.btn-pill
+		border-radius: 1000px
+
+
+	// Generate State Color Buttons
+	&.btn
+		@each $type, $states in map-get($btn-states, 'normal')
+			&-#{$type}
+				@each $property, $value in map-get($states, 'default')
+					#{$property} : $value
+				&:hover
+					@each $property, $value in map-get($states, 'hover')
+						#{$property} : $value
+				&:active, &.active
+					@each $property, $value in map-get($states, 'active')
+						#{$property} : $value
+				&.disabled
+					@each $property, $value in map-get($states, 'disabled')
+						#{$property} : $value
+				&.btn-link
+					@each $property, $value in map-get($states, 'link')
+						#{$property} : $value
+						&:hover
+							opacity: 75%
+				&.btn-outline
+					@each $property, $value in map-get($btn-states, 'outline', $type, 'default')
+						#{$property} : $value
+					&:hover
+						@each $property, $value in map-get($btn-states, 'outline', $type, 'hover')
+							#{$property} : $value
+				&-light
+					@each $property, $value in map-get($btn-states, 'light', $type, 'default')
+						#{$property} : $value
+					&:hover
+						@each $property, $value in map-get($btn-states, 'light', $type, 'hover')
+							#{$property} : $value
+					&:active, &.active
+						@each $property, $value in map-get($btn-states, 'light', $type, 'active')
+							#{$property} : $value
+					&.disabled
+						@each $property, $value in map-get($btn-states, 'light', $type, 'disabled')
+							#{$property} : $value
+					&.btn-link
+						@each $property, $value in map-get($btn-states, 'light', $type, 'link')
+							#{$property} : $value
+					&.btn-outline
+						@each $property, $value in map-get($btn-states, 'outline', $type, 'default')
+							#{$property} : $value
+						&:hover
+							@each $property, $value in map-get($btn-states, 'outline', $type, 'hover')
+								#{$property} : $value
+
+	// Generate Brand Color Buttons
+	&.btn-brand
+		@each $brandColor, $brandColorConfig in $color-brand
+			&-#{$brandColor}
+				@each $property, $value in map-get($brandColorConfig, 'normal', 'default')
+					#{$property} : $value
+				&:hover
+					@each $property, $value in map-get($brandColorConfig, 'normal', 'hover')
+						#{$property} : $value
+				&:active, &.active
+					@each $property, $value in map-get($brandColorConfig, 'normal', 'active')
+						#{$property} : $value
+				&.disabled
+					@each $property, $value in map-get($brandColorConfig, 'normal', 'disabled')
+						#{$property} : $value
+				&.btn-link
+					@each $property, $value in map-get($brandColorConfig, 'normal', 'link')
+						#{$property} : $value
+						&:hover
+							opacity: 75%
+				&.btn-outline
+					@each $property, $value in map-get($brandColorConfig, 'outline', 'default')
+						#{$property} : $value
+					&:hover
+						@each $property, $value in map-get($brandColorConfig, 'outline', 'hover')
+							#{$property} : $value
+				&-light
+					@each $property, $value in map-get($brandColorConfig, 'light', 'default')
+						#{$property} : $value
+					&:hover
+						@each $property, $value in map-get($brandColorConfig, 'light', 'hover')
+							#{$property} : $value
+					&:active, &.active
+						@each $property, $value in map-get($brandColorConfig, 'light', 'active')
+							#{$property} : $value
+					&.disabled
+						@each $property, $value in map-get($brandColorConfig, 'light', 'disabled')
+							#{$property} : $value
+					&.btn-link
+						@each $property, $value in map-get($brandColorConfig, 'light', 'link')
+							#{$property} : $value
+							&:hover
+								opacity: 75%
+					&.btn-outline
+						@each $property, $value in map-get($brandColorConfig, 'outline', 'default')
+							#{$property} : $value
+						&:hover
+							@each $property, $value in map-get($brandColorConfig, 'outline', 'hover')
+								#{$property} : $value

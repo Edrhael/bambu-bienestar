@@ -1,0 +1,39 @@
+header {
+	width: 100%;
+	padding: 1rem;
+	text-align: center;
+	color: white;
+	background-color: #4CAF50;
+}
+header header {
+	font-size: 36px;
+}
+footer {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+//position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.content {
+	padding: 2rem;
+}
+.main-menu{
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+}
+.main-menu-option {
+	color: white;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+.main-menu-option.activeSection{
+	font-weight: 600;
+}
+.emoji {
+	font-size: 150%;
+	vertical-align: middle;
+}

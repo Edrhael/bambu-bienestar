@@ -1,0 +1,11 @@
+// Color Classes
+@each $color-name, $color-map in $color-palette
+	@each $color-key, $color-value in $color-map
+		.color-#{$color-name}-#{$color-key}
+			color: #{$color-value}
+
+// Background Color Classes
+@each $color-name, $color-map in $color-palette
+	@each $color-key, $color-value in $color-map
+		.bg-color-#{$color-name}-#{$color-key}
+			background-color: #{$color-value}

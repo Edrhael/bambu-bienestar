@@ -1,0 +1,639 @@
+$btn-states: (
+
+
+	'normal': (
+
+		'default': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-default
+			),
+
+			'hover': (
+				'background-color': darken($color-default, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-default, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-default,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'primary': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-primary
+			),
+
+			'hover': (
+				'background-color': darken($color-primary, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-primary, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-primary,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'secondary': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-secondary
+			),
+
+			'hover': (
+				'background-color': darken($color-secondary, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-secondary, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-secondary,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'success': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-success
+			),
+
+			'hover': (
+				'background-color': darken($color-success, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-success, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-success,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'danger': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-danger
+			),
+
+			'hover': (
+				'background-color': darken($color-danger, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-danger, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-danger,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'warning': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-warning
+			),
+
+			'hover': (
+				'background-color': darken($color-warning, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-warning, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-warning,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'info': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-info
+			),
+
+			'hover': (
+				'background-color': darken($color-info, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-info, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-info,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		)
+
+	),
+
+	'light': (
+
+		'default': (
+
+			'default': (
+				'color': $color-default-dark,
+				'background-color': $color-default-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-default-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-default-light, 5%),
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed
+			),
+
+			'link': (
+				'color': $color-default-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'primary': (
+
+			'default': (
+				'color': $color-primary-dark,
+				'background-color': $color-primary-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-primary-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-primary-light, 5%),
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed
+			),
+
+			'link': (
+				'color': $color-primary-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'secondary': (
+
+			'default': (
+				'color': $color-secondary-dark,
+				'background-color': $color-secondary-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-secondary-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-secondary-light, 5%),
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed
+			),
+
+			'link': (
+				'color': $color-secondary-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'success': (
+
+			'default': (
+				'color': $color-success-dark,
+				'background-color': $color-success-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-success-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-success-light, 5%),
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed
+			),
+
+			'link': (
+				'color': $color-success-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'danger': (
+
+			'default': (
+				'color': $color-danger-dark,
+				'background-color': $color-danger-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-danger-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-danger-light, 5%),
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed
+			),
+
+			'link': (
+				'color': $color-danger-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'warning': (
+
+			'default': (
+				'color': $color-warning-dark,
+				'background-color': $color-warning-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-warning-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-warning-light, 5%),
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed
+			),
+
+			'link': (
+				'color': $color-warning-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'info': (
+
+			'default': (
+				'color': $color-info-dark,
+				'background-color': $color-info-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-info-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-info-light, 5%),
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed
+			),
+
+			'link': (
+				'color': $color-info-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		)
+
+	),
+
+	'outline': (
+
+		'default': (
+
+			'default': (
+				'color': $color-default,
+				'background-color': transparent,
+				'border-color': $color-default
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-default
+			),
+
+			'active': (
+					'color': $color-white,
+					'background-color': $color-default
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-default-dark,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'primary': (
+
+			'default': (
+				'color': $color-primary,
+				'background-color': transparent,
+				'border-color': $color-primary
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-primary
+			),
+
+			'active': (
+					'color': $color-white,
+					'background-color': $color-primary
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-primary-dark,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'secondary': (
+
+			'default': (
+				'color': $color-secondary,
+				'background-color': transparent,
+				'border-color': $color-secondary
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-secondary
+			),
+
+			'active': (
+					'color': $color-white,
+					'background-color': $color-secondary
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-secondary-dark,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'success': (
+
+			'default': (
+				'color': $color-success,
+				'background-color': transparent,
+				'border-color': $color-success
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-success
+			),
+
+			'active': (
+					'color': $color-white,
+					'background-color': $color-success
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-success-dark,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'danger': (
+
+			'default': (
+				'color': $color-danger,
+				'background-color': transparent,
+				'border-color': $color-danger
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-danger
+			),
+
+			'active': (
+					'color': $color-white,
+					'background-color': $color-danger
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-danger-dark,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'warning': (
+
+			'default': (
+				'color': $color-warning,
+				'background-color': transparent,
+				'border-color': $color-warning
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-warning
+			),
+
+			'active': (
+					'color': $color-white,
+					'background-color': $color-warning
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-warning-dark,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'info': (
+
+			'default': (
+				'color': $color-info,
+				'background-color': transparent,
+				'border-color': $color-info
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-info
+			),
+
+			'active': (
+					'color': $color-white,
+					'background-color': $color-info
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-info-dark,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+	)
+
+)
+

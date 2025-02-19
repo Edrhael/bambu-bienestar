@@ -1,0 +1,211 @@
+:root {
+  --path-project:	"/";
+  --path-assets:	var(--path-project)	+ "assets/";
+  --path-img:	var(--path-assets)	+ "img/";
+  --path-fonts:	var(--path-assets)	+ "webfonts/";
+}
+
+/* Manual Light Theme */
+body.light-theme {
+  --color-theme-default: hsl(165deg, 30%, 90%);
+  --color-theme-text: hsl(218deg, 15%, 25%);
+  --color-theme-text-highlight: hsl(218deg, 15%, 5%);
+}
+
+/* Manual Dark Theme */
+body.dark-theme {
+  --color-theme-default: hsl(250deg, 15%, 10%);
+  --color-theme-text: hsl(218deg, 15%, 75%);
+  --color-theme-text-highlight: hsl(218deg, 15%, 95%);
+}
+
+/* Brand Colors */
+:root {
+  --color-brand-primary:	hsla(165deg, 40%, 50%, 1);
+  --color-brand-secondary: hsla(345deg, 70%, 40%, 1);
+}
+
+/* Sans */
+/* Monospace */
+/* Icons */
+/* Material Symbols not included simply because it is not necessary */
+/* Project Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+address {
+  font-style: normal;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html *::selection {
+  color: white;
+  background-color: var(--color-brand-primary);
+  opacity: 50%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Catamaran", sans;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-theme-text);
+  background-color: var(--color-theme-default);
+  overflow-x: hidden;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin-bottom: 16px;
+  color: var(--color-brand-primary);
+  font-weight: 600;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+h1, .h1 {
+  font-size: 42px;
+}
+
+h2, .h2 {
+  font-size: 36px;
+}
+
+h3, .h3 {
+  font-size: 28px;
+}
+
+h4, .h4 {
+  font-size: 24px;
+}
+
+h5, .h5 {
+  font-size: 20px;
+}
+
+h6, .h6 {
+  font-size: 16px;
+}
+
+a {
+  color: var(--color-theme-text-highlight);
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+b, strong, .strong {
+  color: var(--color-theme-text-highlight);
+  font-weight: 600;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+i {
+  font-style: italic;
+}
+
+mark {
+  background-color: yellow;
+}
+
+small {
+  font-size: 88%;
+}
+
+/* Links - End */
+sub, sup {
+  font-size: 75%;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.list-style-disc, .list-style-decimal {
+  padding-left: 20px;
+}
+
+.list-style-disc {
+  list-style: disc;
+}
+.list-style-disc ul {
+  padding-left: 20px;
+  list-style: circle;
+}
+.list-style-disc ul ul {
+  list-style: square;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+test {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+test.toolbox {
+  display: flex;
+  flex-direction: column;
+  top: 16px;
+  left: 16px;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  backdrop-filter: blur(16px);
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  overflow: hidden;
+  border-radius: 8px;
+}
+test.toolbox .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */

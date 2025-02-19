@@ -1,0 +1,197 @@
+$color-brand: (
+
+
+	'primary': (
+
+		'normal': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-brand-primary
+			),
+
+			'hover': (
+				'background-color': darken($color-brand-primary, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-brand-primary, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-brand-primary,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'light': (
+
+			'default': (
+				'color': $color-brand-primary-dark,
+				'background-color': $color-brand-primary-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-brand-primary-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-brand-primary-light, 5%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-brand-primary-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'outline': (
+
+			'default': (
+				'color': $color-brand-primary-dark,
+				'background-color': transparent,
+				'border-color': $color-brand-primary-dark
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-brand-primary,
+				'border-color': $color-brand-primary
+			),
+
+			'active': (
+				'color': $color-white,
+				'background-color': $color-brand-primary-dark
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-brand-primary,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+	),
+
+
+
+
+	'secondary': (
+
+		'normal': (
+
+			'default': (
+				'color': $color-white,
+				'background-color': $color-brand-secondary
+			),
+
+			'hover': (
+				'background-color': darken($color-brand-secondary, 15%),
+			),
+
+			'active': (
+				'background-color': darken($color-brand-secondary, 15%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-brand-secondary,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'light': (
+
+			'default': (
+				'color': $color-brand-secondary-dark,
+				'background-color': $color-brand-secondary-light
+			),
+
+			'hover': (
+				'background-color': lighten($color-brand-secondary-light, 5%),
+			),
+
+			'active': (
+				'background-color': lighten($color-brand-secondary-light, 5%)
+			),
+
+			'disabled': (
+					'opacity': 50%,
+					'cursor': not-allowed,
+					'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-brand-secondary-light,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+		'outline': (
+
+			'default': (
+				'color': $color-brand-secondary-dark,
+				'background-color': transparent,
+				'border-color': $color-brand-secondary-dark
+			),
+
+			'hover': (
+				'color': $color-white,
+				'background-color': $color-brand-secondary,
+				'border-color': $color-brand-secondary
+			),
+
+			'active': (
+				'color': $color-white,
+				'background-color': $color-brand-secondary-dark
+			),
+
+			'disabled': (
+				'opacity': 50%,
+				'cursor': not-allowed,
+				'pointer-events': none
+			),
+
+			'link': (
+				'color': $color-brand-secondary,
+				'background-color': transparent,
+				'text-decoration': underline
+			)
+
+		),
+
+	)
+)
+

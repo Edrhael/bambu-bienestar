@@ -1,0 +1,76 @@
+html
+	scroll-behavior: smooth
+	*
+		&::selection
+			color: white
+			background-color: var(--color-brand-primary)
+			opacity: 50%
+
+body
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	font-family: $font-default
+	font-size: 16px
+	line-height: 1.5
+	color: var(--color-theme-text)
+	background-color: var(--color-theme-default)
+	overflow-x: hidden
+	transition: background-color .15s ease-in-out, color .15s ease-in-out
+
+h1,.h1, h2,.h2, h3,.h3, h4,.h4, h5,.h5, h6,.h6
+	margin-bottom: 16px
+	color: var(--color-brand-primary)
+	font-weight: 600
+	transition: background-color .15s ease-in-out, color .15s ease-in-out
+
+h1,.h1
+	font-size: 42px
+h2,.h2
+	font-size: 36px
+h3,.h3
+	font-size: 28px
+h4,.h4
+	font-size: 24px
+h5,.h5
+	font-size: 20px
+h6,.h6
+	font-size: 16px
+
+a
+	color: var(--color-theme-text-highlight)
+	transition: background-color .15s ease-in-out, color .15s ease-in-out
+
+b, strong, .strong
+	color: var(--color-theme-text-highlight)
+	font-weight: 600
+	transition: background-color .15s ease-in-out, color .15s ease-in-out
+
+i
+	font-style: italic
+
+mark
+	background-color: yellow
+
+small
+	font-size: 88%
+
+/* Links - End */
+
+
+sub, sup
+	font-size: 75%
+
+main
+	flex-grow: 1
+
+.list-style-disc, .list-style-decimal
+	padding-left: 20px
+
+.list-style-disc
+	list-style: disc
+	ul
+		padding-left: 20px
+		list-style: circle
+		ul
+			list-style: square
