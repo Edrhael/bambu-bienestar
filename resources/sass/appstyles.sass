@@ -1,0 +1,64 @@
+@use "vars/vars"
+@use "mixins/mixins"
+@use "maps/maps"
+
+// @use "functions/functions"
+
+// @use "fonts/fonts"
+
+@use "reset/reset"
+
+//@use "base/palette"
+
+@use "base/typography"
+
+// @use "base/buttons"
+// @use "base/inputs"
+// @use "utilities/utilities"
+
+@use "components/components"
+
+@use "layout/layout"
+
+@use "main"
+
+@use "test/test"
+
+header
+  width: 100%
+  padding: 1rem
+  text-align: center
+  color: white
+  background-color: var(--color-brand-primary)
+
+  header
+    font-size: 36px
+
+footer
+  background-color: var(--color-theme-default-light)
+  color: white
+  text-align: center
+  padding: 1rem
+  bottom: 0
+  width: 100%
+
+.content
+  padding: 2rem
+
+.main-menu
+  display: flex
+  justify-content: center
+  gap: 24px  
+  
+  *
+    color: white
+
+.main-menu-option
+  color: white
+  text-decoration: none
+  text-transform: capitalize
+
+  &.activeSection
+    font-weight: 600
+
+

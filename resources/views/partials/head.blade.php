@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="{{ asset('/assets/css/initial.css') }}">
-<link rel="stylesheet" href="{{ asset('/assets/css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('/assets/css/appstyles.css') }}">
 
-{{-- @vite(['resources/sass/styles.sass']) --}}
+{{-- @vite(['resources/css/styles.css']) --}}

@@ -1,14 +1,17 @@
 test
 	position: fixed
-	top: 0
-	left: 0
+	right: 0
+	bottom: 0
 	z-index: 100
 
 	&.toolbox
-		display: flex
+		position: absolute
+		width: auto
+		height: auto
+		display: inline-flex
 		flex-direction: column
-		top: 16px
-		left: 16px
+		right: 24px
+		bottom: 24px
 		background-color: hsla(0deg, 0%, 0%, 75%)
 		backdrop-filter: blur(16px)
 		transition: background-color .15s ease-in-out, color .15s ease-in-out

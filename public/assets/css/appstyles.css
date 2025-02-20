@@ -7,16 +7,18 @@
 
 /* Manual Light Theme */
 body.light-theme {
-  --color-theme-default: hsl(165deg, 30%, 90%);
-  --color-theme-text: hsl(218deg, 15%, 25%);
-  --color-theme-text-highlight: hsl(218deg, 15%, 5%);
+  --color-theme-default:	hsl(165deg, 24%, 92%);
+  --color-theme-text:	hsl(218deg, 15%, 25%);
+  --color-theme-text-highlight:	hsl(218deg, 15%, 5%);
 }
 
 /* Manual Dark Theme */
 body.dark-theme {
-  --color-theme-default: hsl(250deg, 15%, 10%);
-  --color-theme-text: hsl(218deg, 15%, 75%);
-  --color-theme-text-highlight: hsl(218deg, 15%, 95%);
+  --color-theme-default:	hsl(250deg, 24%, 12%);
+  --color-theme-default-light:	hsl(250deg, 24%, 16%);
+  --color-theme-default-dark:	hsl(250deg, 24%, 10%);
+  --color-theme-text:	hsl(218deg, 15%, 75%);
+  --color-theme-text-highlight:	hsl(218deg, 15%, 95%);
 }
 
 /* Brand Colors */
@@ -65,7 +67,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: "Catamaran", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-theme-text);
@@ -152,6 +154,15 @@ main {
   list-style: square;
 }
 
+.emoji {
+  font-size: 150%;
+  vertical-align: middle;
+  filter: hue-rotate(120deg) saturate(90%) brightness(80%);
+}
+.emoji.emoji-color-default {
+  filter: brightness(90%);
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
@@ -175,15 +186,18 @@ main {
 
 test {
   position: fixed;
-  top: 0;
-  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 100;
 }
 test.toolbox {
-  display: flex;
+  position: absolute;
+  width: auto;
+  height: auto;
+  display: inline-flex;
   flex-direction: column;
-  top: 16px;
-  left: 16px;
+  right: 24px;
+  bottom: 24px;
   background-color: hsla(0, 0%, 0%, 0.75);
   backdrop-filter: blur(16px);
   transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
@@ -206,4 +220,46 @@ test.toolbox .option {
   align-items: center;
   width: 40px;
   height: 40px;
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  background-color: var(--color-brand-primary);
+}
+header header {
+  font-size: 36px;
+}
+
+footer {
+  background-color: var(--color-theme-default-light);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.main-menu * {
+  color: white;
+}
+
+.main-menu-option {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.main-menu-option.activeSection {
+  font-weight: 600;
 }
