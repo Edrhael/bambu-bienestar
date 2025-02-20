@@ -3,8 +3,8 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2022 Fonticons, Inc.
  */
-@import 'functions';
-@import 'variables';
+@use 'functions';
+@use 'variables';
 
 :root, :host {
   --#{$fa-css-prefix}-font-regular: normal 400 1em/1 "#{ $fa-style-family }";

@@ -65,7 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Catamaran", sans;
+  font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-theme-text);
@@ -207,5 +207,3 @@ test.toolbox .option {
   width: 40px;
   height: 40px;
 }
-
-/*# sourceMappingURL=styles.css.map */

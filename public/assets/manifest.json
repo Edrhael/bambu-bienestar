@@ -1,0 +1,18 @@
+{
+  "resources/css/initial.css": {
+    "file": "css/initial.css",
+    "src": "resources/css/initial.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "js/app.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/sass/styles.sass": {
+    "file": "css/styles.css",
+    "src": "resources/sass/styles.sass",
+    "isEntry": true
+  }
+}

@@ -9,12 +9,12 @@ class defaultController extends Controller
 
 	public function home() {
 		$metaTags = __('home.meta_tags');
-		return view('home', $metaTags);
-	}
+        return view('home', ['metaTags' => $metaTags]);
+    }
 
 
 	public function pilates() {
-        return view('services\pilates');
+        return view('services/pilates');
     }
 
     public function contact() {
@@ -22,7 +22,7 @@ class defaultController extends Controller
     }
 
     public function legalAdvice() {
-        return view('legal\legal-advice');
+        return view('legal/legal-advice');
     }
 
     public function laragon() {

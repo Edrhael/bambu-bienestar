@@ -53,3 +53,9 @@ $app->singleton(
 */
 
 return $app;
+
+
+$app->withMiddleware(function (Middleware $middleware) {
+
+    $middleware->trustProxies(at: ['127.0.0.1']);
+});
