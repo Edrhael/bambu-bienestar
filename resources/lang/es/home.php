@@ -15,15 +15,12 @@ return [
 	'main_title' => "Bambú Bienestar",
 
 	'introduction' => "
-		<b><span class='emoji'>👋</span> ¡Hola!</b><br>
-		<br>
-		<br>
-		<span class='emoji emoji-color-default'>👋</span>
+		<b><span class='emoji'>👋</span> ¡Hola!</b>
 		<br>
 		<br>
 		Si estás aquí, entendemos que es porque quieres que te acompañemos en la mejora de tú bienestar personal tanto físico, como mental.
 		<br>
 		<br>
-		Antes de felicitarte por esa fantástica decisión, queremos que sepas que nos sentimos orgullosos de que nos des la oportunidad de formar parte parte de ese nuevo camino <span class='emoji'>😊</span>.",
+		Antes de <b>felicitarte</b> por esa fantástica decisión, queremos que sepas que nos sentimos orgullosos de que nos des la oportunidad de formar parte parte de ese nuevo camino <span class='emoji'>😊</span>.",
 
 ];

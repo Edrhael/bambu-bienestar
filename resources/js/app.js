@@ -7,8 +7,10 @@ const themeToggleButton = document.querySelector('[ui-data-id="theme-toggle-btn"
 const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme) {
+
 	document.body.classList.add(savedTheme);
 } else {
+
 	// Detectar preferencia del sistema si no hay tema guardado
 	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
@@ -17,11 +19,14 @@ if (savedTheme) {
 // Alternar tema y guardar preferencia
 
 themeToggleButton.addEventListener('click', () => {
+
 	if (document.body.classList.contains('dark-theme')) {
+
 		document.body.classList.replace('dark-theme', 'light-theme');
 		localStorage.setItem('theme', 'light-theme');
 
 	} else {
+
 		document.body.classList.replace('light-theme', 'dark-theme');
 		localStorage.setItem('theme', 'dark-theme');
 	}

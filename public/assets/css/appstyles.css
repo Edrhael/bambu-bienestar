@@ -5,6 +5,24 @@
   --path-fonts:	var(--path-assets)	+ "webfonts/";
 }
 
+/* Light Theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-theme-default:	hsl(165deg, 24%, 92%);
+    --color-theme-text:	hsl(218deg, 15%, 25%);
+    --color-theme-text-highlight:	hsl(218deg, 15%, 5%);
+  }
+}
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-theme-default:	hsl(250deg, 24%, 12%);
+    --color-theme-default-light:	hsl(250deg, 24%, 16%);
+    --color-theme-default-dark:	hsl(250deg, 24%, 10%);
+    --color-theme-text:	hsl(218deg, 15%, 75%);
+    --color-theme-text-highlight:	hsl(218deg, 15%, 95%);
+  }
+}
 /* Manual Light Theme */
 body.light-theme {
   --color-theme-default:	hsl(165deg, 24%, 92%);
@@ -56,6 +74,8 @@ ul, ol {
 
 html {
   scroll-behavior: smooth;
+  color: var(--color-theme-text);
+  background-color: var(--color-theme-default);
 }
 html *::selection {
   color: white;
